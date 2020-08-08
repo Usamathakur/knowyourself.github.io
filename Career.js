@@ -1,21 +1,3 @@
-FBInstant.initializeAsync()
-    .then(function () {
-        var progress = 0;
-        var interval = setInterval(function () {
-            if (progress >= 95) {
-                clearInterval(interval);
-                FBInstant.startGameAsync().then(
-                    function () {
-
-                    }
-                )
-            }
-            FBInstant.setLoadingProgress(progress);
-            progress += 5;
-        }, 100)
-    }
-    );
-
 var submitBtn = document.getElementById("submitBtn");
 var careerBtn = document.getElementById("careerBtn");
 var resetBtn = document.getElementById("resetBtn");
